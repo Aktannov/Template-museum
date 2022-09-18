@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" type="text/css" href="/css/info.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#main')">
+            <a href="index.html"><span>Aktan-Residence</span></a>
+        </div>
+        <div id="about">
+            <a href="inffo" title="Возможности" onclick="slowScroll('#main')" class="off">О нас</a>
+            <a href="https://www.facebook.com/aktanarymkubat" title="Возможности" onclick="slowScroll('#main')" class="off">Facebook</a>
+            <a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA" title="Возможности" onclick="slowScroll('#main')" class="off">Youtube</a>
+            <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82" title="Возможности" onclick="slowScroll('#main')" class="off">Wiki</a>
+
+            <div id="menu">
+                <div id="block"></div>
+                <div class="mob-header">
+                    <ul>
+                    <li id="sub-menu"><a href="#">
+                        <img src="/css/img/menu.png" id="img"></a>
+                            <div class="sub-menu">
+                            <ul>
+                                <li><a href="inffo">О нас</a></li>
+                                <li><a href="https://www.facebook.com/aktanarymkubat">Facebook</a></li>
+                                <li><a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA">Youtube</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82">Wiki</a></li>
+                            </ul>
+                        </div>
+                    </li></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="back"></div>
+
+    <div id="photos">
+        <img src="/css/img/leopard.jpg" alt="жалко у пчелки">
+    </div>
+    <div id="name">
+        <!-- <h1>Золотой леопард</h1> -->
+    </div>
+    <div id="desc">
+        <span>"2007 год, пригласили на 60-ый юбилейный кинофестиваль в Локарно. И в канун вылета, вдруг Мирлан заявляет: "Я женюсь..."
+            "Здорово", - обрадовался я и спросил. - "На ком?" 
+            "На Алтынай Койчумановой" - ответил он. 
+            Мне действительно стало хорошо, но больше всего торжествовала Айчурек, которая все время грезила увидеть её как сноху. Мирлан продолжил: "Я был у них дома, родители согласны... Пап, но Алтынай просит Вас в завтрашней поездке не говорить с ней об этом... Она стесняется". И тут возбужденная Айчурек не удержалась: "Значит, ты был у них дома, все обсудили, да, а мы, как ненормальные, обязаны молчать?" Дай волю, она была готова ехать со мной в аэропорт, ей нетерпелось поговорить с будущей невесткой.
+            Должны были лететь в Локарно вместе с Алтынай и встретились утром на регистрации авиабилетов, видимо её привёз папа, а меня подвез Мирлан. Совсем неожиданно, я стал волноваться, не знал, как вести себя в данной ситуации. С Алтынай со дня основания "Ой Арт" тесно сотрудничали и могли решать вопросы любой сложности, причём наши отношения были искренние и доверительные, а тут странно впал в растерянность.
+            Молча прилетели в Москву, от неугомоной Айчурек пришло сообщение: "Ну что, поговорил?" Я ответил: "Нет". И полетели дальше в Цюрих, как немые. Когда сели в поезд, догнало напористое сообщение той же Лунной Красавицы, видимо, написала после "московских молчаний": "Актан, ты что ненормальный? Мылжыйбай, обязательно поговори с Алтынай, иначе можешь оставаться в Швейцарии". Про "оставаться в Швейцарии", видимо, перегнула, но меня сразу осенило, так бывает на съёмках, когда не знаешь, как снимать и небеса (не Айчурек) дарят тебе идею. "Алтынай, Швейцария - нейтральная страна..." - меня уже распирало. - "Все жизненно важные переговоры ведутся на нейтральной земле..." Она засмеялась и мы дальше в пути до самого Локарно говорили о жизни.
+            На фестивале мне вручали "Золотого Леопарда", спросил за что, она перевела: "За то, что Вы есть". Этот приз один из самых памятных и дорогих, ибо Алтынай осенью того года, как невестка вошла в наш дом и хочется сказать ей: "Спасибо за то, что ты есть..."</span>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html', 'body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed")
+            else
+                $("header").attr("class", "fixed")
+        })
+    </script>
+</body>
+</html>

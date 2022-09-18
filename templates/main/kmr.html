@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" type="text/css" href="/css/info.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#main')">
+            <a href="index.html"><span>Aktan-Residence</span></a>
+        </div>
+        <div id="about">
+            <a href="inffo" title="Возможности" onclick="slowScroll('#main')" class="off">О нас</a>
+            <a href="https://www.facebook.com/aktanarymkubat" title="Возможности" onclick="slowScroll('#main')" class="off">Facebook</a>
+            <a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA" title="Возможности" onclick="slowScroll('#main')" class="off">Youtube</a>
+            <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82" title="Возможности" onclick="slowScroll('#main')" class="off">Wiki</a>
+
+            <div id="menu">
+                <div id="block"></div>
+                <div class="mob-header">
+                    <ul>
+                    <li id="sub-menu"><a href="#">
+                        <img src="/css/img/menu.png" id="img"></a>
+                            <div class="sub-menu">
+                            <ul>
+                                <li><a href="inffo">О нас</a></li>
+                                <li><a href="https://www.facebook.com/aktanarymkubat">Facebook</a></li>
+                                <li><a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA">Youtube</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82">Wiki</a></li>
+                            </ul>
+                        </div>
+                    </li></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="back"></div>
+
+    <div id="photos">
+        <img src="/css/img/Untitledzzz.png" alt="жалко у пчелки">
+    </div>
+    <div id="name">
+        <!-- <h1>Конвас</h1> -->
+    </div>
+    <div id="desc">
+        <span>"Конвас - профессиональный аппарат для киносъёмок на 35мм плёнке с рук и со штатива. Именно такой камерой мы полностью сняли "Селкинчек". И вспоминается сцена, когда мальчик бежит с ракушкой среди чуйника, которую долго обсуждали, как снимать. Мы с Хасаном хотели с рук, но Талгат Асыранкулов настаивал, что таким образом нарушим стилистику и предлагал статичную камеру на штативе, но за счет внутрикадрового монтажа добиться нужной нам экспрессии. В конце концов, я настоял, чтобы сняли в движении, как бы камера сопереживает герою, а не отстраненно наблюдает. И тут возникла дилемма, каким образом стабилизировать изображение, не имея под рукой стэдикам, о котором и мечтать не могли из-за скудного бюджета. Хасан, в присущей ему манере, спокойно произнёс: "Я сниму"... Перед съёмкой подходит ко мне и говорит: "Октан..." (так он меня называет, а это бесцветная жидкость в нефти, бензине...). Точнее, тогда Хасан сказал: "Доцент..." (я все время думал, так он меня величает, сравнивая режиссёра с ученым преподавателем ВУЗа, блин, потом выяснилось, оказывается, из-за фильма "Джентельмены удачи", то есть, в его представлении во мне сочетаются два образа: бандита и доброго воспитателя детского сада). Если Хасану что-нибудь нужно от меня, начинает хахмить: "Доцент, керосинка кончилась" (кстати, в керосине тоже есть Октан). Так вот, возвращаясь к съёмкам, он подошёл ко мне и говорит: "Доцент, налей 200 грамм и я сниму, как тебе надо." Просьба оператора-постановщика - всегда закон, тут же послали "гонца", и Хасан залпом выпил полный граненый стакан водки, взял Конвас и после команды "Начали" побежал вместе с мальчиком, снимая его на ходу. Не знаю, сколько сделали дублей, в итоге на экране получили выразительную картинку, полную эмоций. И, что удивительно, с безупречным фокусным расстоянием.
+            На дискуссиях после фестивальных показов не раз спрашивали, как снимали данный эпизод, и все были уверены, что со стэдикамом, а я уточнял, нет, это Хасан Кыдыралиев. А когда меня просят его охарактеризовать, как оператора, я говорю "Хасан - мои глаза."</span>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html', 'body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed")
+            else
+                $("header").attr("class", "fixed")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" type="text/css" href="/css/info.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#main')">
+            <a href="index.html"><span>Aktan-Residence</span></a>
+        </div>
+        <div id="about">
+            <a href="inffo" title="Возможности" onclick="slowScroll('#main')" class="off">О нас</a>
+            <a href="https://www.facebook.com/aktanarymkubat" title="Возможности" onclick="slowScroll('#main')" class="off">Facebook</a>
+            <a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA" title="Возможности" onclick="slowScroll('#main')" class="off">Youtube</a>
+            <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82" title="Возможности" onclick="slowScroll('#main')" class="off">Wiki</a>
+
+            <div id="menu">
+                <div id="block"></div>
+                <div class="mob-header">
+                    <ul>
+                    <li id="sub-menu"><a href="#">
+                        <img src="/css/img/menu.png" id="img"></a>
+                            <div class="sub-menu">
+                            <ul>
+                                <li><a href="inffo">О нас</a></li>
+                                <li><a href="https://www.facebook.com/aktanarymkubat">Facebook</a></li>
+                                <li><a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA">Youtube</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82">Wiki</a></li>
+                            </ul>
+                        </div>
+                    </li></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="back"></div>
+
+    <div id="photos">
+        <img src="/css/img/benza.jpg" alt="жалко у пчелки">
+    </div>
+    <div id="name">
+        <!-- <h1>Яуф</h1> -->
+    </div>
+    <div id="desc">
+        <span>"В процессе подготовки к съёмкам, тщательно разрабатывается каждый персонаж и, по мере необходимости, они наделяются предметами, которые косвенно расширяют возможности восприятия сценарного образа. Так, придумали для Кентавра яуф - ящик упаковки фильмокопий (обычно в них перевозят пленку для показа в кинотеатрах) и тем самым хотели подчеркнуть, что главный герой бывший киномеханик. По сюжету, он зарабатывает на стройке и в таком ящике, предположительно, носит необходимые инструменты и никогда не расстаётся с ним. Единственный раз, от растерянности, забыл у продавщицы бозо Шарапат, когда она объясняется ему в своей любви.
+            На сельской сходке Кентавра опорочили клеветой и выдворили из села. Тогда Шарапат догоняет своего возлюбленного и возвращает ему оставленный у неё яуф.
+            Покидая родные места, он дарит его юноше и девушке на мосту, те удивленно открывают крышку, но мы так и не видим, что там внутри. В итоге, ящик для инструментов превращается, в своего рода, символ - оберег кинематографа.
+            При сдаче рабочей версии монтажа, продюсер с немецкой стороны Танассис Каратанос стал настаивать, чтобы в конце картины появился титр, объясняющий зрителям, что это за предмет. И я вспомнил про Хичкоковский макгаффин: "Не важно, что это за вещь, главное, все хотят ею обладать", или в нашей интерпретации: те, кто не знают, что такое яуф, пусть приложат усилия понять смысл неопознанной вещи".</span>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html', 'body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed")
+            else
+                $("header").attr("class", "fixed")
+        })
+    </script>
+</body>
+</html>

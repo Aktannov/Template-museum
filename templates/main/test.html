@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" type="text/css" href="/css/info.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#main')">
+            <a href="index.html"><span>Aktan-Residence</span></a>
+        </div>
+        <div id="about">
+            <a href="inffo" title="Возможности" onclick="slowScroll('#main')" class="off">О нас</a>
+            <a href="https://www.facebook.com/aktanarymkubat" title="Возможности" onclick="slowScroll('#main')" class="off">Facebook</a>
+            <a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA" title="Возможности" onclick="slowScroll('#main')" class="off">Youtube</a>
+            <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82" title="Возможности" onclick="slowScroll('#main')" class="off">Wiki</a>
+
+            <div id="menu">
+                <div id="block"></div>
+                <div class="mob-header">
+                    <ul>
+                    <li id="sub-menu"><a href="#">
+                        <img src="/css/img/menu.png" id="img"></a>
+                            <div class="sub-menu">
+                            <ul>
+                                <li><a href="inffo">О нас</a></li>
+                                <li><a href="https://www.facebook.com/aktanarymkubat">Facebook</a></li>
+                                <li><a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA">Youtube</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82">Wiki</a></li>
+                            </ul>
+                        </div>
+                    </li></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="back"></div>
+
+    <div id="photos">
+        <img src="/css/img/kalpak.jpg" alt="жалко у пчелки" width="650px">
+    </div>
+    <div id="name">
+        <!-- <h1>Калпак</h1> -->
+    </div>
+    <div id="desc">
+        <span>"Мирлан на "Свет аке" был вторым режиссёром, в чьи обязанности входит подготовка актёров. И он все время просил меня, как исполнителя роли, чтобы я освоил монтерские когти, научился взбираться на электрический столб. Я откладывал, где-то внутренне чувствовал, при необходимости, смогу это сделать. На сложные съёмки предполагалось, что у меня будет дублер и готовили каскадера Мурата Бурханова, он параллельно снимался в охране Бекзата (Асхата Сулайманова).
+            К сцене, когда пьяный Свет аке лезет на столб, чтобы сделать замыкание и, таким образом, приблизиться к своей заветной мечте иметь сына, разумеется, мы готовили дублера. Хасан Кыдыралиев из Алматы привёз на два дубля пиротехнический пакет, который специальным приспособлением мог в нужный момент взорваться. Мурат, перевоплотившись в новый образ, полез на столб, а когда приблизился к проводам и потянулся руками, по команде сработал взрыв пакет. Мощная искра озарила округу, и, якобы от удара током, он повис на страховом поясе, зацепившись за столб. Редко получаешь такое удовольствие от съёмки, радость всколыхнула меня, даже монтеры-консультанты были в восторге: "Как настоящее замыкание!" Вдруг засуетились каскадеры, быстро начали ставить лестницы и с трудом спустили беспомощного Мурата. Оказывается, у него обгорели руки и он не мог за что-либо держаться. Руки покрылись сплошными волдырями, кое-где кровоточило. Могло быть хуже... Когда поднимал руки к проводам, он, на всякий случай, опустил голову и прикрыл лицо калпаком. И это его спасло, он мог ослепнуть. Я преклоняюсь перед стойкостью Мурата, который до команды "стоп" не издал ни звука и, несмотря на ужасную боль, доиграл сцену.
+            Калпак обгорел, он был своего рода раритетом, снимавшимся во многих кыргызких фильмах, и художник по костюмам Инара Абдиева со своей командой с трудом вернули его к съёмкам.
+            Мурату нужно было какое-то время на лечение, а работа продолжалась, и мне пришлось самому на когтях подниматься вверх по столбу. Мирлан после мимикой дал понять: "как заправский монтер".</span>
+    </div> 
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html', 'body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed")
+            else
+                $("header").attr("class", "fixed")
+        })
+    </script>
+</body>
+</html>

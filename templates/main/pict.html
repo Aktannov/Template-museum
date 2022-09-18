@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" type="text/css" href="/css/info.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#main')">
+            <a href="index.html"><span>Aktan-Residence</span></a>
+        </div>
+        <div id="about">
+            <a href="inffo" title="Возможности" onclick="slowScroll('#main')" class="off">О нас</a>
+            <a href="https://www.facebook.com/aktanarymkubat" title="Возможности" onclick="slowScroll('#main')" class="off">Facebook</a>
+            <a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA" title="Возможности" onclick="slowScroll('#main')" class="off">Youtube</a>
+            <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82" title="Возможности" onclick="slowScroll('#main')" class="off">Wiki</a>
+
+            <div id="menu">
+                <div id="block"></div>
+                <div class="mob-header">
+                    <ul>
+                    <li id="sub-menu"><a href="#">
+                        <img src="/css/img/menu.png" id="img"></a>
+                            <div class="sub-menu">
+                            <ul>
+                                <li><a href="inffo">О нас</a></li>
+                                <li><a href="https://www.facebook.com/aktanarymkubat">Facebook</a></li>
+                                <li><a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA">Youtube</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82">Wiki</a></li>
+                            </ul>
+                        </div>
+                    </li></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="back"></div>
+
+    <div id="photos">
+        <img src="/css/img/kartina.jpg" alt="жалко у пчелки">
+    </div>
+    <div id="name">
+        <!-- <h1>Первый этюд маслом</h1> -->
+    </div>
+    <div id="desc">
+        <span>"Мой первый этюд маслом.
+            В художественном училище было обязательным сначала писать акварелью, и только после полугодия разрешали пользоваться масляными красками. Так давали возможность овладеть техникой акварели.
+            Тихие улочки возле Ошского базара, точнее, тогда все говорили Пивзавода, хотя рынок назывался Ала-Арчинский. Сюда мы привозили продавать свои яблоки.
+            Общежитие, где я жил, находилось на Киевской-Темирязева, и мне было удобно приходить в этот район писать с натуры, к тому же эти места было принято считать нашими. Отсюда уезжал небезызвестный автобус "Пивзавод - Кирова - Маловодное".
+            Я почти заканчивал этюд, когда увидел идущих в мою сторону кировских ребят. Аскера узнал сразу, он выделялся среди них ростом, был старше меня на 3-4 года и славился своим гонором. Обычно, в таких местах распивали спиртные напитки. И я стал беспокоиться, что сейчас будут приставать, заставлять пить. Мало кто знал, что я совсем не пьющий (надо уточнить, когда-то был, а то после "Свет аке" неудобно категорично заявлять). В незнакомых компаниях, чтобы заставить тебя выпить, в ход пускали все, даже оскорбления и унижения, как ни странно, это считалось хорошим тоном гостеприимства. Мы поздоровались, буквально на мгновения они наблюдали за мной и, как я предполагал, начали пить водку. Одна тара на всех, стакан был спрятан в кустах и водка пошла по кругу, первая миновала меня, потом вторая... Закуска была отменная: Аскер, вроде, работал в Пишпеке на продовольственном складе. К моему удивлению, так и ушли, не предложив мне выпить, даже отведать, как было принято, кусочек хлеба. Было ужасно обидно, они со мной обошлись, как с последним человеком.
+            С годами, я все чаще стал принимать участие в разного рода мероприятиях сельчан. Буквально недавно встретил Аскера и рассказал ему тот случай, он, оказывается, все помнит и спокойно мне говорит: "Да мы тебе не хотели мешать..."</span>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html', 'body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed")
+            else
+                $("header").attr("class", "fixed")
+        })
+    </script>
+</body>
+</html>

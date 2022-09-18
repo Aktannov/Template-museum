@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" type="text/css" href="/css/info.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#main')">
+            <a href="index.html"><span>Aktan-Residence</span></a>
+        </div>
+        <div id="about">
+            <a href="inffo" title="Возможности" onclick="slowScroll('#main')" class="off">О нас</a>
+            <a href="https://www.facebook.com/aktanarymkubat" title="Возможности" onclick="slowScroll('#main')" class="off">Facebook</a>
+            <a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA" title="Возможности" onclick="slowScroll('#main')" class="off">Youtube</a>
+            <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82" title="Возможности" onclick="slowScroll('#main')" class="off">Wiki</a>
+
+            <div id="menu">
+                <div id="block"></div>
+                <div class="mob-header">
+                    <ul>
+                    <li id="sub-menu"><a href="#">
+                        <img src="/css/img/menu.png" id="img"></a>
+                            <div class="sub-menu">
+                            <ul>
+                                <li><a href="inffo">О нас</a></li>
+                                <li><a href="https://www.facebook.com/aktanarymkubat">Facebook</a></li>
+                                <li><a href="https://www.youtube.com/channel/UCIqMgtl_v59UlufeJeeS_wA">Youtube</a></li>
+                                <li><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D0%BD_%D0%90%D1%80%D1%8B%D0%BC_%D0%9A%D1%83%D0%B1%D0%B0%D1%82">Wiki</a></li>
+                            </ul>
+                        </div>
+                    </li></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="back"></div>
+
+    <div id="photos">
+        <img src="/css/img/mmoto.png" alt="жалко у пчелки">
+    </div>
+    <div id="name">
+        <!-- <h1>Ветряк</h1> -->
+    </div>
+    <div id="desc">
+        <span>"На "Маймыле" снимали эпизод с Зиной, по сюжету она шла по обочине и останавливала машины. Съёмочная площадка находилась между Балыкчы и Кок-Мойноком, на безлюдной трассе. Камера с длиннофокусным объективом была на расстоянии от неё и, таким образом, добивались излюбленного операторами контрового рисунка с размытым фоном.
+            И вдруг, не подчиняясь оцеплению, за нами выскочил мерседес и на полном ходу сбил актрису. До сих пор перед глазами, как от удара подлетела словно кукла и рухнула на землю. Я с трудом добежал до Зины, страх за её судьбу сковал моё сердце. Мы осторожно занесли в машину, она стонала и плакала пока добрались до больницы.
+            После осмотра врачей, выяснилось, у Зины перелом руки и ушибы. Спасла от тяжких последствий пышная фигура. Она была своеобразной красоты, словно сошла с картин Рубенса.
+            И в сцене, когда Маймыл с друзьями подкрадываются к спящей на кровати пьяной Зине, рука ее была в гипсе, мизансцену построили так, чтобы не было видно.
+            Мировая премьера "Маймыла" состоялась в Каннах, и дирекция фестиваля пригласила в составе делегации и Зину. Перед самым отъездом, в корридоре "Кыргызфильма", оказывается, её встретил, тогда ещё живой, наш выдающийся актёр Болот Бейшеналиев и сказал: "Я всю жизнь мечтал поехать в Канны... Поздравляю Вас и белой завистью завидую Вам!"
+            После показа в Каннах, во время вопросов-ответов, когда узнали, что блудницу Зину сыграла учительница начальных классов из Балыкчы Александра Митрохина, зал восторженно смеялся и бурно аплодировал".</span>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html', 'body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed")
+            else
+                $("header").attr("class", "fixed")
+        })
+    </script>
+</body>
+</html>
